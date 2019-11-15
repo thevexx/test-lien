@@ -1,0 +1,11 @@
+<svg 
+  *ngIf="start && end"
+  [ngStyle]="{'left.px': left, 'top.px': top, 'height.px': height, 'width.px': width}">
+  <marker [id]="'markerArrow' + id" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+    <circle r="5" [attr.fill]="color" cy="5" cx="5" />
+  </marker>
+  <path fill="none" [attr.transform]="transform" [attr.d]="path" [attr.stroke]="color" [attr.stroke-width]="strokeWidth" [attr.marker-start]="'url(#markerArrow' + id + ')'" />
+</svg>
+<div id="content" [ngStyle]="{'left.px': left, 'top.px': top, 'height.px': height, 'width.px': width}">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,25 @@
+<app-card title="Card 1"></app-card>
+<app-card appLink [appEndingLinks]="[link1]" [appStartingLinks]="[link5]" title="Card 2"></app-card>
+<app-card appLink [appEndingLinks]="[]" title="Card 3"></app-card>
+<app-card appLink [appStartingLinks]="[link1]" title="Card 4"></app-card>
+<app-card appLink [appEndingLinks]="[link2, link6]" [appStartingLinks]="[link4]" title="Card 5"></app-card>
+<app-card appLink [appEndingLinks]="[link3, link4, link5]" title="Card 6"></app-card>
+<app-card appLink [appStartingLinks]="[link2]" title="Card 7"></app-card>
+<app-card title="Card 8"></app-card>
+<app-card title="Card 9"></app-card>
+<app-card appLink [appStartingLinks]="[link6]" title="Card 10"></app-card>
+<app-card title="Card 11"></app-card>
+<app-card title="Card 12"></app-card>
+
+<app-link #link1 color="#93BA6B">
+  <button (click)="clicked()">i</button>
+</app-link>
+<app-link #link2 color="#6599B2">
+  <button (click)="clicked()">i</button>
+  </app-link>
+<app-link #link3></app-link>
+<app-link #link4 color="violet">
+  <button (click)="clicked()" (mouseenter)="link4.strokeWidth = 4"  (mouseleave)="link4.strokeWidth = 3">i</button>
+</app-link>
+<app-link #link5 color="#93BA6B"></app-link>
+<app-link #link6></app-link>
